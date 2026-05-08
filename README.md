@@ -7,7 +7,7 @@
 
 ## 🌐 Live Demo
 
-> **[https://convoflow-eight.vercel.app/](https://convoflow-eight.vercel.app/)**
+> **[https://convo-flow-peach.vercel.app/](https://convo-flow-peach.vercel.app/)**
 
 - **Frontend** — Deployed on [Vercel](https://vercel.com)
 - **Backend API** — Deployed on [Render](https://render.com)
@@ -209,7 +209,7 @@ npm run dev
 3. Set **Build Command**: `npm install`
 4. Set **Start Command**: `npm start`
 5. Add all environment variables from `.env.example`
-6. Set `NODE_ENV=production` and `CLIENT_URL=https://convoflow-eight.vercel.app`
+6. Set `NODE_ENV=production` and `CLIENT_URL=https://convo-flow-peach.vercel.app`
 
 ### Frontend → Vercel
 
@@ -319,4 +319,4 @@ ISC License — see [LICENSE](./LICENSE) for details.
 Built with ❤️ using the MERN stack + Socket.IO.
 
 > **ConvoFlow** — Real-time conversations, beautifully designed.
-> 🔗 **[convoflow-eight.vercel.app](https://convoflow-eight.vercel.app/)**
+> 🔗 **[convo-flow-peach.vercel.app](https://convo-flow-peach.vercel.app/)**
