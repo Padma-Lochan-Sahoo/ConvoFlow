@@ -1,13 +1,18 @@
 <div align="center">
   <h1>💬 ConvoFlow</h1>
   <p><strong>A production-grade real-time chat application built with the MERN stack + Socket.IO</strong></p>
-
-  ![Node.js](https://img.shields.io/badge/Node.js-18+-green?style=flat-square&logo=node.js)
-  ![React](https://img.shields.io/badge/React-19-blue?style=flat-square&logo=react)
-  ![MongoDB](https://img.shields.io/badge/MongoDB-8-green?style=flat-square&logo=mongodb)
-  ![Socket.IO](https://img.shields.io/badge/Socket.IO-4.8-black?style=flat-square&logo=socket.io)
-  ![License](https://img.shields.io/badge/License-ISC-yellow?style=flat-square)
 </div>
+
+---
+
+## 🌐 Live Demo
+
+> **[https://convoflow-eight.vercel.app/](https://convoflow-eight.vercel.app/)**
+
+- **Frontend** — Deployed on [Vercel](https://vercel.com)
+- **Backend API** — Deployed on [Render](https://render.com)
+- **Database** — MongoDB Atlas (cloud-hosted)
+- **Media Storage** — Cloudinary CDN
 
 ---
 
@@ -32,11 +37,11 @@ ConvoFlow is a full-stack real-time chat application featuring:
 | ⚡ Real-time Messaging | Bidirectional via Socket.IO rooms |
 | 🟢 Online Presence | Live user online/offline status |
 | ✏️ Typing Indicators | Real-time "is typing" feedback |
-| 🖼️ Image Upload | Attach and share images (Cloudinary) |
+| 🖼️ Image Upload | Attach and share images (Cloudinary CDN) |
 | 🎨 30+ Themes | DaisyUI theme switcher (dark, light, etc.) |
 | 📱 Mobile-first | Responsive sidebar + mobile chat view |
 | 🔒 Secure | JWT httpOnly cookies, helmet, bcrypt |
-| 🚀 Production Ready | Deployable on Vercel + Render |
+| 🚀 Deployed | Live on Vercel + Render |
 
 ---
 
@@ -204,7 +209,7 @@ npm run dev
 3. Set **Build Command**: `npm install`
 4. Set **Start Command**: `npm start`
 5. Add all environment variables from `.env.example`
-6. Set `NODE_ENV=production` and `CLIENT_URL=https://your-frontend.vercel.app`
+6. Set `NODE_ENV=production` and `CLIENT_URL=https://convoflow-eight.vercel.app`
 
 ### Frontend → Vercel
 
@@ -261,16 +266,6 @@ Client                         Server
 
 ---
 
-## 🖼️ Screenshots
-
-> _Add screenshots here after deployment_
-
-| Login | Chat | Profile |
-|-------|------|---------|
-| ![login]() | ![chat]() | ![profile]() |
-
----
-
 ## 🔒 Security Features
 
 - JWT stored in `httpOnly` cookies (not localStorage)
@@ -294,6 +289,7 @@ Client                         Server
 | Images not uploading | Check Cloudinary credentials in backend `.env` |
 | MongoDB connection fail | Whitelist your IP in MongoDB Atlas Network Access |
 | Cookie not set in production | Ensure backend uses `sameSite: none, secure: true` and frontend sends `withCredentials: true` |
+| Render cold start delay | Free tier Render services sleep after inactivity — first request may take ~30s to wake up |
 
 ---
 
@@ -323,3 +319,4 @@ ISC License — see [LICENSE](./LICENSE) for details.
 Built with ❤️ using the MERN stack + Socket.IO.
 
 > **ConvoFlow** — Real-time conversations, beautifully designed.
+> 🔗 **[convoflow-eight.vercel.app](https://convoflow-eight.vercel.app/)**
