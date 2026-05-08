@@ -8,11 +8,27 @@ import { app, server } from './lib/socket.js'
 
 dotenv.config()
 
+const envOrigins = (process.env.CORS_ORIGINS || "")
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
 const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:3000',
   process.env.CLIENT_URL,
+  ...envOrigins,
 ].filter(Boolean);
+
+const isAllowedVercelOrigin = (origin) => {
+  if (!origin) return false;
+  try {
+    const { hostname } = new URL(origin);
+    return hostname.endsWith(".vercel.app");
+  } catch {
+    return false;
+  }
+};
 
 
 // Security headers
@@ -23,7 +39,7 @@ app.use(helmet({
 // CORS
 app.use(cors({
   origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
+    if (!origin || allowedOrigins.includes(origin) || isAllowedVercelOrigin(origin)) {
       callback(null, true);
     } else {
       callback(new Error(`CORS: origin ${origin} not allowed`));
